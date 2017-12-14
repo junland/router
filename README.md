@@ -3,7 +3,7 @@ Provides a simple router for net/http.
 
 ## Install
 ```
-go get github.com/r7kamura/router
+go get github.com/junland/router
 ```
 
 ## Usage
@@ -22,12 +22,12 @@ import (
 	"net/http"
 )
 
-func root(writer http.ResponseWriter, request *http.Request) {
+func root(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(writer, "Welcome")
 }
 
-func entry(writer http.ResponseWriter, request *http.Request) {
-	fmt.Fprint(writer, "Entry: " + request.URL.Query().Get("id") + "\n")
+func entry(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(writer, "Entry: " + r.URL.Query().Get("id") + "\n")
 }
 
 func main() {
