@@ -60,6 +60,10 @@ func (router *Router) Put(pattern string, handlerOrFunc interface{}) {
 	router.AppendRoute("PUT", pattern, handlerOrFunc)
 }
 
+func (router *Router) Patch(pattern string, handlerOrFunc interface{} {
+        router.AppendRoute("PATCH", patter, handlerOrFunc)
+}
+
 func (router *Router) Delete(pattern string, handlerOrFunc interface{}) {
 	router.AppendRoute("DELETE", pattern, handlerOrFunc)
 }
