@@ -61,7 +61,7 @@ func (router *Router) Put(pattern string, handlerOrFunc interface{}) {
 }
 
 func (router *Router) Patch(pattern string, handlerOrFunc interface{}) {
-        router.AppendRoute("PATCH", patter, handlerOrFunc)
+        router.AppendRoute("PATCH", pattern, handlerOrFunc)
 }
 
 func (router *Router) Delete(pattern string, handlerOrFunc interface{}) {
